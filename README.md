@@ -4,7 +4,7 @@ I needed a simple starting point app, it doesn't have a lot of bells and whistle
 
 Feel free to fork this project for your own projects.
 
-# Getting started
+## Getting started
 
 Copy config/app_config.EXAMPLE.yml to config/app_config.yml, and populate with your own third-party API keys. 
 

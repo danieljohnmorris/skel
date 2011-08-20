@@ -1,6 +1,6 @@
-Skel::Application.routes.draw do
-  devise_for :users, :controllers => {:registrations => 'registrations'}
+App::Application.routes.draw do
   resources :authentications, :path => "/users/auth"
+  devise_for :users, :controllers => {:registrations => 'registrations'}
   match '/auth/:provider/callback' => 'authentications#create'
   get "home/index"
   root :to => "home#index"

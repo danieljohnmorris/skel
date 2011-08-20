@@ -73,3 +73,13 @@ a {
 .error_messages ul {
   margin: 0;
 }
+
+/*---- HEADER ----------------------------*/
+
+#masthead {
+	float: left;
+}
+
+#user_nav {
+	float: right;
+}

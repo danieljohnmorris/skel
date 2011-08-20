@@ -1,8 +1,8 @@
 Skel::Application.routes.draw do
-  devise_for :users
-
+  devise_for :users, :controllers => {:registrations => 'registrations'}
+  resources :authentications, :path => "/auth"
+  match '/auth/:provider/callback' => 'authentications#create'
   get "home/index"
-
   root :to => "home#index"
 
   # The priority is based upon order of creation:

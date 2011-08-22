@@ -47,7 +47,7 @@ App::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
-  config.action_mailer.default_url_options = { :host => "WEBSITE.COM" }
+  config.action_mailer.default_url_options = { :host => 'skel.herokuapp.com' }
   
   # heroku require
   config.action_dispatch.x_sendfile_header = nil

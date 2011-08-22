@@ -1,0 +1,29 @@
+development:
+    domain:             localhost:3000
+    app_name:           App
+    twitter_key:        
+    twitter_secret:     
+    facebook_key:       172218082831373
+    facebook_secret:    98a2c55859b543633d4549b85be1c0cb
+    linked_in_key:      ht3xuvg87571
+    linked_in_secret:   GK9fhGxhi9qnET42
+
+test:
+    domain:             test.host
+    app_name:           App
+    twitter_key:        
+    twitter_secret:     
+    facebook_key:       
+    facebook_secret:    
+    linked_in_key:      
+    linked_in_secret:   
+
+production:
+    domain:             skel.herokuapp.com
+    app_name:           App
+    twitter_key:        
+    twitter_secret:     
+    facebook_key:       
+    facebook_secret:    
+    linked_in_key:      
+    linked_in_secret:

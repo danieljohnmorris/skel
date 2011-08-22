@@ -6,6 +6,8 @@ Feel free to fork this project for your own projects.
 
 ## Getting started
 
+If you don't want pg installed locally (or in my case it errors), use this to install bundle gems:
+bundle install --without production
 
 ### Config
 

@@ -3,8 +3,12 @@ App::Application.routes.draw do
   devise_for :users, :controllers => {:registrations => 'registrations'}
   resources :users
   match '/auth/:provider/callback' => 'authentications#create'
+
   get "home/index"
   root :to => "home#index"
+
+  get "about/index"
+  match "about" => "about#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

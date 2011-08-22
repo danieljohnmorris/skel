@@ -6,6 +6,15 @@ Feel free to fork this project for your own projects.
 
 ## Getting started
 
+
+### Config
+
 Copy config/app_config.EXAMPLE.yml to config/app_config.yml, and populate with your own third-party API keys. 
 
 Remove services you don't need from views/authentications.html.erb
+
+Add extra config lines for your settings and access them using APP_CONFIG[:some_setting]
+
+### Stuff used
+
+Skull clipart from http://www.clker.com/clipart-skull-and-bones.html

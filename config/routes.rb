@@ -1,6 +1,7 @@
 App::Application.routes.draw do
-  resources :authentications, :path => "/users/auth"
+  resources :authentications
   devise_for :users, :controllers => {:registrations => 'registrations'}
+  resources :users
   match '/auth/:provider/callback' => 'authentications#create'
   get "home/index"
   root :to => "home#index"

@@ -1,35 +1,83 @@
 <!DOCTYPE html>
 <html>
-  <head>
-	<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
-	<%= stylesheet_link_tag "application" %>
-	<link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.0.0.min.css">
+<head>
+	<title><%= content_for?(:title) ? yield(:title) : APP_CONFIG[:app_name] %></title>
+	<%= stylesheet_link_tag "bootstrap-1.0.0.min", "bootstrap-doc-styles", "omniauth", "application" %>
 	<%= javascript_include_tag :defaults %>
 	<%= csrf_meta_tag %>
 	<%= yield(:head) %>
-  </head>
-  <body>
-	<div id="container">
-		<div id="header">	
-		  <div id="masthead">
-			<%= link_to "Home", root_path %>
-		  </div>
-		  <div id="user_nav">
-			<% unless controller_name == "authentications" and action_name == "index" %>			
-				<% if user_signed_in? %>
-					Signed in as <%= current_user.email %>. Not you?
-					<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-				<% else %>
-					<%= link_to "Sign in", authentications_path %>
-				<% end %>
-			<% end %>
-		  </div>
+</head>
+<body>
+	<div id="header">
+		<div class="topbar">
+				<div class="container">
+					<h3>
+						<a href="<%= root_path %>" title="homepage">
+							<%= image_tag "icon.png", :alt => "Logo icon", :class => "topbar-icon" %>
+							<span><%= APP_CONFIG[:app_name] %></span>
+						</a>
+					</h3>
+					<ul>
+						<li class=""><a href="#masthead">Overview</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#forms">Forms</a></li>
+						<li class="active"><a href="#navigation">Navigation</a></li>
+					</ul>
+					<ul class="nav secondary-nav">
+						<% if user_signed_in? %>
+						<li class="menu">
+							<a href="#" class="menu"><%= current_user.email %></a>
+							<ul class="menu-dropdown">
+								<li <% if current_page? :controller => "users", :action => "show", :id => current_user.id || nil %>class="active"<% end %>><%= link_to "Your profile", user_path(current_user) %></li>
+								<li><%= link_to "Your authentications", authentications_path %></li>
+								<li class="divider"></li>
+								<li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+							</ul>
+						</li>
+						<% else %>
+						<li class="menu<% if current_page? :controller => "/authentications", :action => "index" %> active<% end %>">
+								<%= link_to "Sign in", authentications_path %>
+						</li>
+						<% end %>
+					</ul>
+				</div>
 		</div>
-		<% flash.each do |name, msg| %>
-			<%= content_tag :div, msg, :id => "flash_#{name}" %>
-			<% end %>
-			<%= content_tag :h1, yield(:title) if show_title? %>
-		<%= yield %>
 	</div>
-  </body>
+	
+	<%= yield :masthead %>
+		
+	<div class="container">
+		<section>		
+	       	<% flash.each do |name, msg| 
+				case name.to_s
+					when "notice"
+						flash_tint = "success"
+					when "error"
+						flash_tint = "error"
+				end
+				%>
+				<%= content_tag :div, :class => "row" do content_tag :div, msg, :id => "flash_#{name}", :class => "alert-message #{flash_tint}" end %>
+			<% end %>
+
+			<% if show_title? %>
+			<div class="page-header">
+			    <h1><%= yield(:title) %> <small><%= yield(:subtitle) %></small></h1>
+			</div>
+			<% end %>
+
+			<%= yield %>
+		</section>
+	</div>
+
+	<div id="footer">
+		<div class="inner">
+			<div class="container">
+				<p class="right"><a href="#">Back to top</a></p>
+				<p>Simple tutorials followed &amp; plugins compiled by <a href="http://twitter.com/danielmorris" target="_blank">@danielmorris</a>. <br/>
+				<%= link_to "Docs & code live on github", "https://github.com/danieljohnmorris/skel" %>.
+				</p>
+			</div>
+		</div>
+	</div>
+</body>
 </html>

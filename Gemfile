@@ -2,15 +2,10 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.9'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
 gem 'devise'
 gem 'omniauth'
 gem 'jquery-rails'
 gem "less"
-
-gem 'sqlite3', :groups => [:development, :test]
 
 # Asset template engines
 group :assets do
@@ -21,11 +16,12 @@ end
 group :development do
   gem 'nifty-generators'
   gem 'heroku'
+  gem 'sqlite3'
 end
 
 group :test do
-  # Pretty printed test output
-  gem 'turn', :require => false
+  gem 'turn', :require => false # Pretty printed test output
+  gem 'sqlite3'
 end
 
 group :production do

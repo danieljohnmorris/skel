@@ -5,12 +5,28 @@ gem 'rails', '3.0.9'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
 gem 'nifty-generators', :group => :development
+gem 'heroku', :group => :development
+
+gem 'sqlite3'
 gem 'devise'
 gem 'omniauth'
 gem 'jquery-rails'
 gem "less"
+
+gem 'pg', :group => :production
+
+# Asset template engines
+group :assets do
+  gem 'sass-rails', "~> 3.1.0.rc"
+  gem 'coffee-script'
+  gem 'uglifier'
+end
+
+group :test do
+  # Pretty printed test output
+  gem 'turn', :require => false
+end
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -34,4 +50,5 @@ gem "less"
 # group :development, :test do
 #   gem 'webrat'
 # end
-gem "mocha", :group => :test
+
+# gem "mocha", :group => :test

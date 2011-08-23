@@ -44,12 +44,12 @@
 	<%= yield :masthead %>
 		
 	<div class="container">
-		<section>		
+		<section>	
 	       	<% flash.each do |name, msg| 
 				case name.to_s
 					when "notice"
 						flash_tint = "success"
-					when "error"
+					when "alert"
 						flash_tint = "error"
 				end
 				%>

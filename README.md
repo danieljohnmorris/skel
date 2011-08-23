@@ -19,6 +19,8 @@ Remove services you don't need from views/authentications.html.erb
 Postgres is a required gem for Heroku (assuming you'll be deploying to heroku, at least for prototypes). If you don't want the "pg" gem installed locally (or in my case it errors), use this command to install bundle gems locally without it:
 bundle install --without production
 
+Oh and use ruby 1.9.2 (if don't use it already, look at RVM)
+
 ## Deploy
 
 Article on deploying rails 3 apps to Heroku:

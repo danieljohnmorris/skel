@@ -22,40 +22,40 @@ bundle install --without production
 ## Deploy
 
 Article on deploying rails 3 apps to Heroku:
-http://devcenter.heroku.com/articles/rails3
+* http://devcenter.heroku.com/articles/rails3
 
 Something like:
-1. "heroku create yourappname --stack cedar"
-2. Add yourappname.herokuapp.com URL to config/app_config.yml and config/environments/production.rb
-3. git push heroku master
-4. heroku run rake db:migrate --trace
-5. heroku open
+* "heroku create yourappname --stack cedar"
+* Add yourappname.herokuapp.com URL to config/app_config.yml and config/environments/production.rb
+* git push heroku master
+* heroku run rake db:migrate --trace
+* heroku open
 
 ## Stuff used
 
 ### Twitter Bootstrap (Frontend toolkit)
 
 Go here and be amazed:
-http://twitter.github.com/bootstrap/
+* http://twitter.github.com/bootstrap/
 
 ### Devise (Rails 3 friendly user auth)
 
 Read this:
-https://github.com/plataformatec/devise
+* https://github.com/plataformatec/devise
 
 Watch this:
-http://railscasts.com/episodes/209-introducing-devise
+* http://railscasts.com/episodes/209-introducing-devise
 
 ### Omniauth (Third party auth)
 
 Read this:
-https://github.com/intridea/omniauth
+* https://github.com/intridea/omniauth
 
 Watch these:
-http://railscasts.com/episodes/235-omniauth-part-1
-http://railscasts.com/episodes/236-omniauth-part-2
+* http://railscasts.com/episodes/235-omniauth-part-1
+* http://railscasts.com/episodes/236-omniauth-part-2
 
 ### Skull clipart
 
 Pillaged from: 
-http://www.clker.com/clipart-skull-and-bones.html
+* http://www.clker.com/clipart-skull-and-bones.html

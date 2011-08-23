@@ -53,9 +53,11 @@
 	</a>
 
   </div>
+  <% unless signed_in? %>
   <div class="span6 columns">
 	<h3>Don't use any of these services?</h3>
 	<p><%= link_to "Sign in", new_user_session_path %> or <%= link_to "Create an account", new_user_registration_path %> with a password instead.</p>
   </div>
+  <% end %>
 </div>
 

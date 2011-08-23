@@ -62,6 +62,12 @@ Watch these:
 * http://railscasts.com/episodes/235-omniauth-part-1
 * http://railscasts.com/episodes/236-omniauth-part-2
 
+### Hipster Ipsum
+
+The name says it all:
+
+* http://hipsteripsum.me/
+
 ### Skull clipart
 
 Pillaged from: 

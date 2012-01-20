@@ -7,6 +7,7 @@ development:
     facebook_secret:    
     linked_in_key:      
     linked_in_secret:   
+    google_analytics:   
 
 test:
     domain:             test.host
@@ -17,11 +18,13 @@ test:
     facebook_secret:    
     linked_in_key:      
     linked_in_secret:   
+    google_analytics:   
 
 production:
     domain:             example.com
     app_name:           App
     # FILL IN FOLLOWING LINES WITH REAL ACCOUNTS (POINTING TO HEROKU)
+    # google_analytics:   
     # twitter_key:        
     # twitter_secret:     
     # facebook_key:       

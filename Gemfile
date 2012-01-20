@@ -18,32 +18,38 @@ group :assets do
   gem 'uglifier'
 end
 
+
 group :development do
   gem 'nifty-generators'
   gem 'taps'
   gem 'heroku'
 end
 
-group :test do
-  # Pretty printed test output
+group :development, :test do
   gem 'ZenTest'
+  gem 'rspec'
+    gem 'rspec-rails'
+  gem 'spork'
+    gem 'minitest'
   gem 'cucumber'
     gem 'cucumber-rails'
-    gem 'cucumber-screenshot'
+    # gem 'cucumber-screenshot'
     gem 'cucumber-websteps', :git => "https://github.com/kucaahbe/cucumber-websteps.git"
-  gem 'factory_girl'
+  gem "autotest-rails"
+    gem "autotest-notification"
   gem 'capybara'
+  gem 'mechanize'
+  gem 'factory_girl'
+  gem 'annotate'
+  gem 'database_cleaner'
+  gem 'rb-fsevent'
+  gem 'guard-spork'
+    gem 'guard-rspec'
+    gem 'guard-cucumber'
   gem 'database_cleaner'
   gem 'launchy'
   gem 'pickler'
-  gem 'spork', '~> 0.9.0.rc'
-    #gem 'guard-spork'
- gem "systemu"
-  gem "autotest-rails"
-    gem "autotest-notification"
-  gem "rspec"
-    gem "rspec-rails"
-    gem 'minitest'
+ # gem "systemu"
   # gem 'turn', :require => false
 end
 

@@ -13,5 +13,5 @@ if Rake.application.top_level_tasks.first =~ /^spork/
 else
   # Load the Rails environment and load all tasks. (Slow)
   require File.expand_path("../config/application", __FILE__)
-  ExampleApp::Application.load_tasks
+  App::Application.load_tasks
 end

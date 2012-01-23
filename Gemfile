@@ -7,6 +7,9 @@ gem 'rails', '3.1.3'
 
 gem 'devise'
 gem 'omniauth'
+  gem 'omniauth-twitter'
+  gem 'omniauth-facebook'
+  gem 'omniauth-linkedin', :git => 'https://github.com/skorks/omniauth-linkedin.git'
 gem 'jquery-rails'
 gem "less"
 

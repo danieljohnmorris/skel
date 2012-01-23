@@ -7,6 +7,13 @@ GIT
       cucumber (>= 1.1.1)
       launchy
 
+GIT
+  remote: https://github.com/skorks/omniauth-linkedin.git
+  revision: ef92e0fb31a06cc8830de28172426e71d8753dc0
+  specs:
+    omniauth-linkedin (0.0.6)
+      omniauth-oauth (~> 1.0.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -90,6 +97,10 @@ GEM
       multi_json (~> 1.0)
     factory_girl (2.5.0)
       activesupport
+    faraday (0.7.5)
+      addressable (~> 2.2.6)
+      multipart-post (~> 1.1.3)
+      rack (< 2, >= 1.1.0)
     ffi (1.0.11)
     gherkin (2.7.4)
       json (>= 1.4.6)
@@ -136,14 +147,29 @@ GEM
     mime-types (1.17.2)
     minitest (2.10.1)
     multi_json (1.0.4)
+    multipart-post (1.1.4)
     net-http-digest_auth (1.2)
     net-http-persistent (2.3.3)
     nifty-generators (0.4.6)
     nokogiri (1.5.0)
     ntlm-http (0.1.1)
+    oauth (0.4.5)
+    oauth2 (0.5.2)
+      faraday (~> 0.7)
+      multi_json (~> 1.0)
     omniauth (1.0.2)
       hashie (~> 1.2)
       rack
+    omniauth-facebook (1.2.0)
+      omniauth-oauth2 (~> 1.0.0)
+    omniauth-oauth (1.0.0)
+      oauth
+      omniauth (~> 1.0)
+    omniauth-oauth2 (1.0.0)
+      oauth2 (~> 0.5.0)
+      omniauth (~> 1.0)
+    omniauth-twitter (0.0.7)
+      omniauth-oauth (~> 1.0)
     orm_adapter (0.0.6)
     pg (0.12.2)
     pickler (0.2.1)
@@ -268,6 +294,9 @@ DEPENDENCIES
   minitest
   nifty-generators
   omniauth
+  omniauth-facebook
+  omniauth-linkedin!
+  omniauth-twitter
   pg
   pickler
   rails (= 3.1.3)
